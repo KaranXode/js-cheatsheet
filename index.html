@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <title>JavaScript Cheat Sheet & Quick Reference</title>
+  </head>
+  <body>
+    <div class="progress-bar-container">
+  <div class="progress-bar"></div>
+</div>
+
+    <div class="m-container">
+      <header>
+        <div><img width="54" height="54" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/></div>
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>
+           <div class="mode" onclick="changeMode()">
+            <img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/external-flat-papa-vector/78/external-Light-Mode-interface-flat-papa-vector.png"
+            alt="external-Light-Mode-interface-flat-papa-vector"
+          />
+           </div>
+          </li>
+        </ul>
+      </header>
+      <div class="heading-wrapper">
+        <h1 class="heading">
+          <span>JavaScript</span>
+          <span class="heading-light">cheatsheet</span>
+        </h1>
+        <div>
+          <p>
+            A JavaScript cheat sheet with the most important concepts,
+            functions, methods, and more. A complete quick reference.
+          </p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div>
+          <h2 class="card-header">#Getting Started</h2>
+          <div class="card-list" id="cardList"></div>
+        </div>
+      </div>
+
+    
+    </div>
+    <div class="goto-top" onclick="gotoTop()" id="goto">
+        <img class="goto-icon" width="50" height="50" src="https://img.icons8.com/ios-filled/50/circled-chevron-up.png" alt="circled-chevron-up"/> 
+      </div>
+
+    <script src="./JS/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+  </body>
+</html>

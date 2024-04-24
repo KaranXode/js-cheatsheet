@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primaryColor: #11b981;
+  /* --primaryColor:#2622ba; */
+
+  /* --primaryColor: #ffa400; */
+}
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+body {
+  background-color: #f1f5f9;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+li{
+    margin-inline: 8px;
+}
+.mode{
+    cursor: pointer;
+}
+.goto-top{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    display: none;
+    cursor: pointer;
+}
+.goto-icon{
+    filter: brightness(0) saturate(100%) invert(46%) sepia(86%) saturate(1013%) hue-rotate(124deg) brightness(97%) contrast(87%);
+    /* filter: brightness(0) saturate(100%) invert(18%) sepia(93%) saturate(4712%) hue-rotate(244deg) brightness(71%) contrast(107%); */
+}
+.dark-mode{
+    background-color: #111;
+    color: #fff;
+}
+.m-container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem;
+}
+.heading-wrapper {
+  text-align: center;
+  color: #334154;
+  width: 100%;
+}
+.heading {
+  font-weight: 300;
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.heading span{
+    font-weight: 700;
+}
+.heading-light {
+  color: #94a3b8;
+  font-weight: 300 !important;
+}
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.card-header {
+  color: var(--primaryColor);
+  font-size: 30px;
+  font-weight: 200;
+  margin: 24px 0;
+}
+.card-body {
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: rgb(255 255 255);
+  padding-top: 1.5rem;
+  box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
+    0 1px 2px rgba(102, 119, 136, 0.3);
+}
+.card-body:hover .card-copy-btn {
+    opacity: 1;
+}
+.card-title {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+  border-bottom-left-radius: 0.5rem;
+  background-color: var(--primaryColor);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.05em;
+  color: rgb(255 255 255);
+  --tw-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
+    0 1px 2px rgba(102, 119, 136, 0.3);
+  --tw-shadow-colored: 0 6px 8px var(--tw-shadow-color),
+    0 1px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+pre {
+  position: relative;
+  padding: 16px;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #fff !important;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+  white-space: pre-line !important;
+}
+.card-copy-btn {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+@media (max-width: 991px) {
+  .card-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .card-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+
+/* Progress bar */
+
+.progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #f0f0f0;
+    z-index: 9999;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: var(--primaryColor);
+    transition: all 0.3s ease;
+  }
+  
+  
